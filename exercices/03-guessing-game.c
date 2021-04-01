@@ -23,6 +23,7 @@ int main (){
     {
         printf("Guess a number 0-%i or -1 to quit: ", maxRandValue);
         scanf("%i", &playerGuess);
+        getchar(); // Clean any new line chars from buffer
 
         // Check if guess is whitin range
         if(playerGuess <= maxRandValue && playerGuess >= 0 ){
