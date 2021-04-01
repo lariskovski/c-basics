@@ -8,7 +8,7 @@ int main (){
     
     printf("Choose how many stores: ");
     scanf("%i", &lines);
-    getchar()/
+    getchar();
     printf("Choose how many apartment blocks per store: ");
     scanf("%i", &columns);
 
