@@ -1,30 +1,26 @@
+#include <stdlib.h>
 #include <stdio.h>
 
-int main(){
+void main(){
+    int vet[3] = {12,22,321};
+    int *p = vet; // Same as vet[0]
 
+    for (int i = 0; i < 3; i++)
+    {
 
-    // =============================
-    //          POINTERS
-    // =============================
-    int x = 5; // Alocated at 0x5F1A
-    int *p = &x; // Points to 0x5F1A
+        // Changes value of vet[1] using the pointer
+        if (i == 1)
+        {
+            *p = 11;
+        }
 
-    printf("Initial X Variable: %i\nPointer: %i\n", x, *p);
-    printf("Reassinging pointer to value 6.\n");
-    *p = 6;
-    printf("Variable: %i\nPointer: %i\n\n\n", x, *p);
-
-    // =============================
-    //         NOT POINTERS
-    // =============================
-    int y = 5; // Alocated at 0x5F1A
-    int np = y; // Gets value stored at 0x5F1A and allocated it in another address
-
-    printf("Initial Y Variable: %i\nNot a Pointer: %i\n", y, np);
-    printf("Reassinging np to value 6.\n");
-    np = 6;
-    printf("Variable: %i\nNot a Pointer: %i\n", y, np);
-
-
-    return 0;
+        printf("\nP actual memory addres: %p\nP Referenced variable (vet[%i]) memory address: %p\nP referenced variable (vet[%i]) value:%d", (void*)&p, i, p, i, *p);
+        // Example
+        // P actual memory addres: 0x7ffd673c3ba0
+        // P Referenced variable (vet[0]) memory address: 0x7ffd673c3bac
+        // P referenced variable (vet[0]) value:12
+        
+        p++; // Pointer moves to the next int position
+    }
+    
 }
