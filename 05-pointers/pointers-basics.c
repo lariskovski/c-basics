@@ -16,9 +16,9 @@ void main(){
 
         printf("\nP actual memory addres: %p\nP Referenced variable (vet[%i]) memory address: %p\nP referenced variable (vet[%i]) value:%d", (void*)&p, i, p, i, *p);
         // Example
-        // P actual memory addres: 0x7ffd673c3ba0
         // P Referenced variable (vet[0]) memory address: 0x7ffd673c3bac
-        // P referenced variable (vet[0]) value:12
+        // *P referenced variable (vet[0]) value: 12
+        // &P actual memory addres: 0x7ffd673c3ba0
         
         p++; // Pointer moves to the next int position
     }
